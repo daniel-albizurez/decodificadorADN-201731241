@@ -47,9 +47,11 @@ public class ControladorAnalizador implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jBtnAnalizar) {
-            JOptionPane.showMessageDialog(vista, analizador.analizar(
-                    vista.jTxtCadena1.getText(),
-                    vista.jTxtCadena2.getText()));
+            vista.jLblPatron.setText( "El patrón encontrado es: " + 
+                    analizador.analizar(
+                            vista.jTxtCadena1.getText(),
+                            vista.jTxtCadena2.getText()));
+            vista.jTxtCadena1.requestFocus();
         }
     }
     

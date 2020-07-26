@@ -32,6 +32,7 @@ public class JFrmAnalizador extends javax.swing.JFrame {
         jLblCadena2 = new javax.swing.JLabel();
         jTxtCadena1 = new javax.swing.JTextField();
         jTxtCadena2 = new javax.swing.JTextField();
+        jLblPatron = new javax.swing.JLabel();
         jBtnAnalizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,6 +48,8 @@ public class JFrmAnalizador extends javax.swing.JFrame {
         jTxtCadena1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jTxtCadena2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLblPatron.setText(" ");
 
         jBtnAnalizar.setText("Analizar");
 
@@ -67,8 +70,13 @@ public class JFrmAnalizador extends javax.swing.JFrame {
                         .addComponent(jTxtCadena1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(63, 63, 63))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jBtnAnalizar)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(jBtnAnalizar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jLblPatron)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -82,9 +90,11 @@ public class JFrmAnalizador extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblCadena2)
                     .addComponent(jTxtCadena2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addGap(23, 23, 23)
                 .addComponent(jBtnAnalizar)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLblPatron)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -140,6 +150,7 @@ public class JFrmAnalizador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBtnAnalizar;
     private javax.swing.JLabel jLblCadena2;
+    public javax.swing.JLabel jLblPatron;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField jTxtCadena1;
     public javax.swing.JTextField jTxtCadena2;
