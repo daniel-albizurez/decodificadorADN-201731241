@@ -7,6 +7,7 @@ package controlador;
 
 import java.util.Scanner;
 import modelo.Analizador;
+import vista.JFrmAnalizador;
 
 /**
  *
@@ -14,8 +15,14 @@ import modelo.Analizador;
  */
 public class ControladorAnalizador {
     
-        private Analizador analizador = new Analizador();
+    private Analizador analizador = new Analizador();
+    private JFrmAnalizador vista = new JFrmAnalizador();
 
+    public ControladorAnalizador(JFrmAnalizador vista){
+        this.vista = vista;
+        this.vista.setVisible(true);
+    }
+    
     public ControladorAnalizador() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese las cadenas a analizar (Presione la tecla ENTER "
