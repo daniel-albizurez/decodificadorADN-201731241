@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejecutar;
+package controlador;
 
+import java.util.Scanner;
 import modelo.Analizador;
 
 /**
@@ -17,9 +18,11 @@ public class Ejecutar {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Analizador analizador = new Analizador();
-        analizador.setCadenas("ctgggccttgaggaaaactg", "gtaccagtactgatagt ");
-        System.out.println(analizador.analizar());
+        System.out.println("Ingrese las cadenas a analizar (Presionando enter después de cada cadena)");
+        System.out.println("El conjunto de bases adyacentes de mayor tamaño es: "
+                + analizador.analizar(scanner.nextLine(), scanner.nextLine()));
     }
     
 }
