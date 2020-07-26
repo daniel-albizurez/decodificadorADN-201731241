@@ -6,7 +6,7 @@
 package modelo;
 
 /**
- *
+ * Representa un analizador de cadenas
  * @author DANIEL
  */
 public class Analizador {
@@ -18,7 +18,7 @@ public class Analizador {
      * @param cadena1
      * @param cadena2 
      */
-    public void setCadenas(String cadena1, String cadena2){
+    private void setCadenas(String cadena1, String cadena2){
         if (cadena1.length() > cadena2.length()) {
             mayor = cadena1;
             menor = cadena2;
@@ -31,7 +31,7 @@ public class Analizador {
      * Método para encontrar la subcadena más larga en común a dos cadenas ingresadas
      * @return la subcadena encontrada
      */
-    public String analizar(){
+    private String analizar(){
         //Varibales de tipo entero que sirven como contadores para controlar los caracteres que se están evaluando
         int inicio = 0;
         int fin = 2;

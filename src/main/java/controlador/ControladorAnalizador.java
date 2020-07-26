@@ -13,7 +13,7 @@ import modelo.Analizador;
 import vista.JFrmAnalizador;
 
 /**
- *
+ * Clase Controlador, intermediaria de la interaz gráfica y el objeto Analizador
  * @author DANIEL
  */
 public class ControladorAnalizador implements ActionListener{
@@ -21,12 +21,21 @@ public class ControladorAnalizador implements ActionListener{
     private Analizador analizador = new Analizador();
     private JFrmAnalizador vista = new JFrmAnalizador();
 
+    /**
+     * Crea un nuevo objeto Controlador 
+     * @param vista Recibe un JFrameAnalizador como parametro 
+     */
     public ControladorAnalizador(JFrmAnalizador vista){
         this.vista = vista;
+        //Se muestra la interfaz gráfica
         this.vista.setVisible(true);
+        //Se establece el objeto (Controlador) encargado de manejar los eventos de 
+        //la interfaz gráfica
         this.vista.jBtnAnalizar.addActionListener(this);
     }
-    
+    /**
+     * Crea un nuevo objeto Controlador
+     */
     public ControladorAnalizador() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese las cadenas a analizar (Presione la tecla ENTER "
@@ -34,7 +43,7 @@ public class ControladorAnalizador implements ActionListener{
         System.out.println("El conjunto de bases adyacentes de mayor tamaño es: "
                 + analizador.analizar(scanner.nextLine(), scanner.nextLine()));
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jBtnAnalizar) {
