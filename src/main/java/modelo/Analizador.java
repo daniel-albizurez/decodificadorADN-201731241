@@ -72,7 +72,24 @@ public class Analizador {
      * @return la subcadena encontrada
      */
     public String analizar(String cadena1, String cadena2){
+        if (correcto(cadena1) && correcto(cadena2)) {
         setCadenas(cadena1, cadena2);
-        return analizar();
+        return "Conjunto de bases adyacentes hallado: "
+                 + analizar();
+        } else {
+            return "Por favor revise las cadenas";
+        }
+    }
+    private boolean correcto(String texto){
+        boolean correcto = true;
+        texto = texto.toLowerCase();
+        for (int i = 0; i < texto.length(); i++) {
+            correcto &= (texto.charAt(i) == 'a' ||
+                    texto.charAt(i) == 'g'
+                    || texto.charAt(i) == 'c'
+                    || texto.charAt(i) == 't'
+                    );
+        }
+        return correcto;
     }
 }

@@ -8,7 +8,6 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 import modelo.Analizador;
 import vista.JFrmAnalizador;
 
@@ -40,15 +39,13 @@ public class ControladorAnalizador implements ActionListener{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese las cadenas a analizar (Presione la tecla ENTER "
                 + "después de cada cadena)");
-        System.out.println("El conjunto de bases adyacentes de mayor tamaño es: "
-                + analizador.analizar(scanner.nextLine(), scanner.nextLine()));
+        System.out.println(analizador.analizar(scanner.nextLine(), scanner.nextLine()));
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jBtnAnalizar) {
-            vista.jLblPatron.setText( "El patrón encontrado es: " + 
-                    analizador.analizar(
+            vista.jLblPatron.setText(analizador.analizar(
                             vista.jTxtCadena1.getText(),
                             vista.jTxtCadena2.getText()));
             vista.jTxtCadena1.requestFocus();

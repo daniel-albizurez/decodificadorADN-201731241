@@ -75,8 +75,8 @@ public class JFrmAnalizador extends javax.swing.JFrame {
                         .addGap(164, 164, 164)
                         .addComponent(jBtnAnalizar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(jLblPatron)))
+                        .addGap(29, 29, 29)
+                        .addComponent(jLblPatron, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
